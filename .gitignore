@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# Задания
+03_kafka/output.txt
+03_kafka/consumer.log
+05_etl_sqlite/etl_data.db
+05_etl_sqlite/temp_*
