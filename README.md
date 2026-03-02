@@ -29,3 +29,23 @@
 
 * **[05_etl_sqlite](./05_etl_sqlite)** 
   Разработка ETL-пайплайна (Extract, Transform, Load). Эндпоинт принимает сырой CSV-файл, с помощью Pandas производит очистку данных, валидацию типов, фильтрацию по бизнес-правилам и загрузку чистых данных в реляционную БД (SQLite).
+
+  ## Как запустить проекты
+
+Для запуска инфраструктуры (Redis, RabbitMQ, Kafka, Prometheus) используется Docker. Базовый алгоритм запуска выглядит так:
+
+1. Клонировать репозиторий:
+   ```bash
+   git clone https://github.com/SabiaPI1/data-engineering-practices.git
+   cd data-engineering-practices
+   ```
+2. Поднять необходимые контейнеры (на примере Kafka):
+   ```bash
+   cd 03_kafka
+   docker-compose up -d
+   ```
+3. Установить зависимости и запустить приложение:
+   ```bash
+   pip install -r requirements.txt
+   uvicorn app.main:app --reload
+   ```
